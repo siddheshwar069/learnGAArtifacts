@@ -24,7 +24,7 @@ jobs:
     steps:
       - name: publish js file name
         id: publish
-        run: find dist/assets/*.js -f -execdir echo 'script-file = {}' >> $GITHUB_OUTPUT ';'
+        run: find dist/assets/*.js -f -execdir echo 'script-file = {}' >> $GITHUB.OUTPUT ';'
       - name: Get code
         uses: actions/checkout@v3
       - name: Install dependencies
