@@ -41,6 +41,8 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: output context
+        run: echo "${{needs.build.outputs.script-file}}"
       - name: upload artifacts
         uses: actions/download-artifact@v4
         with:
